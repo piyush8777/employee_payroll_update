@@ -77,7 +77,7 @@ const getInputElementValue = (id) => {
     return value;
 }
 
-/*UC13 - Saving employee payroll to local Storage */
+/*UC14 - Saving employee payroll to local Storage */
 
 function createAndUpdateStorage(employeePayrollData){
 
