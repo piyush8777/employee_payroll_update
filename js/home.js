@@ -25,3 +25,43 @@ const createInnerHtml = () => {
     `;
     document.querySelector('#table-display').innerHTML = innerHtml;
 }
+const creteEmployeePayrollJSON = () => {
+    let empPayrollListLocal = [
+        {
+            _name: 'Piyush Shaw',
+            _gender: 'Male',
+            _department: [
+                'Engineer',
+                'HR'
+            ],
+            _salary: '3000000',
+            _startDate: '1 Jan 2020',
+            _note: '',
+            _id: new Date().getTime(),
+            _profilePic: '../assest/profile-images/Ellipse -2.png'
+        },
+        {
+            _name: 'Shreya Singh',
+            _gender: 'Female',
+            _department: [
+                'HR',
+                'Finance'
+            ],
+            _salary: '5000000',
+            _startDate: '1 Feb 2020',
+            _note: '',
+            _id: new Date().getTime(),
+            _profilePic: '../assest/profile-images/Ellipse -1.png'
+        }
+    ];
+    return empPayrollListLocal;
+}
+
+//To print Multiple Department without showing 'undefined'.
+const getDeptHtml = (deptList) => {
+    let deptHtml = '';
+    for ( const dept of deptList) {
+        deptHtml = `${deptHtml} <div class='dept-label'>${dept}</div>`
+    }
+    return deptHtml;
+}
