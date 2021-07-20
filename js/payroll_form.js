@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
-/*UC 13 create Employee Payroll Object*/
+/*UC 12 create Employee Payroll Object*/
 
 const save = () => {
     try{
@@ -77,7 +77,8 @@ const getInputElementValue = (id) => {
     return value;
 }
 
-/*UC14 - Saving employee payroll to local Storage */
+
+/*UC13 - Saving employee payroll to local Storage */
 
 function createAndUpdateStorage(employeePayrollData){
 
@@ -92,9 +93,11 @@ function createAndUpdateStorage(employeePayrollData){
     localStorage.setItem("EmployeePayrollList",JSON.stringify(employeePayrollList))
 }
 
-/* UC15 -Reset the form on clicking reset button */
+ 
 
-const resetForm = () => {
+ /* UC14 -Reset the form on clicking reset button */
+
+ const resetForm = () => {
     setValue('#name', '');
     unsetSelectedValues('[name=profile]');
     unsetSelectedValues('[name=gender]');
