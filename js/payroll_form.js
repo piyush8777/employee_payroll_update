@@ -76,3 +76,18 @@ const getInputElementValue = (id) => {
     let value = document.getElementById(id).value;
     return value;
 }
+
+/*UC13 - Saving employee payroll to local Storage */
+
+function createAndUpdateStorage(employeePayrollData){
+
+    let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+
+    if(employeePayrollList != undefined){
+        employeePayrollList.push(employeePayrollData);
+    } else{
+        employeePayrollList = [employeePayrollData]
+    }
+    alert(employeePayrollList.toString());
+    localStorage.setItem("EmployeePayrollList",JSON.stringify(employeePayrollList))
+}
